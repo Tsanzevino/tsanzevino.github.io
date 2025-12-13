@@ -1,0 +1,325 @@
+/* user styles */
+
+/* styles are what change the color and sizes of stuff on your site. */
+
+/* these are variables that are being used in the code
+these tended to confuse some people, so I only kept 
+the images as variables */
+
+:root {
+    --header-image: url('images/pso2coast.png');
+    --body-bg-image: url('images/blueprintpattern.jpg');
+    --container-bg-image: url('images/sand.png');
+    --footer-image: url('images/metaltex.png');
+    --container-image: url('images/towel.jpg');
+    --button-image: url('images/tape.jpg');
+    --box-background-image: url('images/paper.jpg');
+
+    /* colors 
+    pale sandy color #FBE7C0
+    dope blue-green #8DF5EE*/
+    --content: #8DF5EE;
+}
+
+/* if you have the URL of a font, you can set it below */
+/* feel free to delete this if it's not your vibe */
+
+/* this seems like a lot for just one font and I would have to agree 
+but I wanted to include an example of how to include a custom font.
+If you download a font file you can upload it onto your Neocities
+and then link it! Many fonts have separate files for each style
+(bold, italic, etc. T_T) which is why there are so many!
+
+*/
+
+@font-face {
+    font-family: IllusionSerif;
+    src: url("fonts/youngserif-regular.ttf") format("truetype");
+}
+
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 17px;
+    margin: 0;
+    background-color: #08031A;
+    /* you can delete the line below if you'd prefer to not use an image */
+    background-size: 100%;
+    color: #000000;
+    background-image: var(--body-bg-image);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* below this line is CSS for the layout */
+
+/* this is a CSS comment
+to uncomment a line of CSS, remove the * and the /
+before and after the text */
+
+
+/* the "container" is what wraps your entire website */
+/* if you want something (like the header) to be Wider than
+the other elements, you will need to move that div outside
+of the container */
+#container {
+    max-width: 900px;
+    /* background-image: var(--container-bg-image); */
+    background-color: azure;
+    /* this is the width of your layout! */
+    /* if you change the above value, scroll to the bottom
+and change the media query according to the comment! */
+    margin: 0 auto;
+    /* this centers the entire page */
+}
+
+/* the area below is for all links on your page
+EXCEPT for the navigation */
+#container a {
+    color: #ED64F5;
+    font-weight: bold;
+    /* if you want to remove the underline
+you can add a line below here that says:
+text-decoration:none; */
+}
+
+#container2 {
+    background-color:rgb(177, 171, 164);
+    margin: 0 auto;
+}
+
+.hoverbox {
+    width: auto;
+    position: relative;
+}
+
+.hoverimage {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.hovercontent {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+.hoverbox:hover .hoverimage {
+    opacity: 0.3;
+}
+
+.hoverbox:hover .hovercontent {
+    opacity: 1;
+}
+
+.text {
+    background-color: #3a3b3a;
+    color: white;
+    padding: 1% 2%;
+}
+
+#header {
+    height: 40px;
+    width: 100%;
+    background-color: #5e4e8c;
+    /* header color here! */
+    height: 150px;
+    /* this is only for a background image! */
+    /* if you want to put images IN the header, 
+you can add them directly to the <div id="header"></div> element! */
+    background-image: var(--header-image);
+    background-size: cover;
+}
+
+/* navigation section!! */
+#navbar {
+    height: 40px;
+    background-color: #DAD3DD;
+    background-image: var(--button-image);
+    /* navbar color */
+    width: 100%;
+}
+
+#navbar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+#navbar li {
+    padding-top: 10px;
+}
+
+/* navigation links*/
+#navbar li a {
+    color: #004eaa;
+    /* navbar text color */
+    font-weight: 800;
+    text-decoration: none;
+    /* this removes the underline */
+}
+
+/* navigation link when a link is hovered over */
+#navbar li a:hover {
+    color: #873F7A;
+    text-decoration: underline;
+}
+
+#flex {
+    display: flex;
+}
+
+.grid {
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    gap: 1%;
+    overflow: hidden;
+}
+
+/* this colors BOTH sidebars
+if you want to style them separately,
+create styles for #leftSidebar and #rightSidebar */
+aside {
+    /*background-color: #F5E2C0;*/
+    font-size: smaller;
+    width: 46%;
+    float: left;
+    padding: 1%;
+    /* this makes the sidebar text slightly smaller */
+}
+
+
+/* this is the color of the main content area,
+between the sidebars! */
+main {
+    background-color: #FBE7C0;
+    /* background-image: var(--container-bg-image); */
+    background-color: azure;
+    flex: 1;
+    padding: 16px;
+    order: 2;
+}
+
+/* what's this "order" stuff about??
+allow me to explain!
+if you're using both sidebars, the "order" value
+tells the CSS the order in which to display them.
+left sidebar is 1, content is 2, and right sidebar is 3! */
+
+#leftSidebar {
+    order: 1;
+}
+
+#rightSidebar {
+    order: 3;
+}
+
+footer {
+    /*background-color: #A4FA87;*/
+    background-image: var(--footer-image);
+    background-size: cover;
+    /* background color for footer */
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    text-align: center;
+    /* this centers the footer text */
+}
+
+h1,
+h2,
+h3 {
+    color: #873F7A;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+strong {
+    /* this styles bold text */
+    color: #873F7A;
+}
+
+/* this is just a cool box, it's the darker colored one */
+.box {
+    background-color: #FAD387;
+    background-image: var(--box-background-image);
+    border: 1px solid #873F7A;
+    padding: 10px;
+    width:auto;
+    overflow: visible;
+}
+
+/* CSS for extras */
+
+#topBar {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    font-size: smaller;
+    background-color: #A4FA87;
+}
+
+
+/* BELOW THIS POINT IS MEDIA QUERY */
+
+/* so you wanna change the width of your page? 
+by default, the container width is 900px.
+in order to keep things responsive, take your new height,
+and then subtrack it by 100. use this new number as the 
+"max-width" value below
+*/
+
+@media only screen and (max-width: 800px) {
+    #flex {
+        flex-wrap: wrap;
+        height:fit-content;
+        overflow: visible;
+    }
+
+    aside {
+        width: 100%;
+        order: 2;
+    }
+
+    .grid {
+        grid-template-columns: auto;
+        height:fit-content;
+        overflow-y: scroll;
+    }
+
+    /* the order of the items is adjusted here for responsiveness!
+since the sidebars would be too small on a mobile device.
+feel free to play around with the order!
+*/
+    main {
+        order: 0;
+    }
+
+    #leftSidebar {
+        order: 2;
+        width: 100%;
+    }
+
+    #rightSidebar {
+        order: 3;
+    }
+
+    #navbar ul {
+        flex-wrap: wrap;
+    }
+}
