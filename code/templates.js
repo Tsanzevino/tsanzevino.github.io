@@ -2,14 +2,14 @@ class TemplateHeader extends HTMLElement{
   constructor() {
     super();
     this.innerHTML = `
-    <div id="header">
-        <nav id="navbar" style="margin-bottom: 10px;">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="experience.html">Experience</a></li>
-            </ul>
-        </nav>
+    <div id="headerArea">
+      <nav id="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="experience.html">Experience</a></li>
+        </ul>
+      </nav>
     </div>
     `;
     
@@ -24,11 +24,12 @@ class TemplateFooter extends HTMLElement{
   
     this.innerHTML=`
     <footer>
-        <div id="footer-container">
-            <h1>Connect with Me!</h1>
-            <h2><a href="https://www.linkedin.com/in/theodore-anzevino/">LinkedIn</a></h2>
-            <h2>Discord: @zeldafanta</h2>
-        </div>
+      <h1>Connect with Me!</h1>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/theodore-anzevino/" target="_blank">LinkedIn</a></li>
+        <li><strong>Discord: @zeldafanta</strong></li>
+        <li><a href="https://github.com/Tsanzevino/" target="_blank">GitHub</a></li>
+      </ul>
     </footer>
     `;}}
     
