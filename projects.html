@@ -3,9 +3,9 @@
   <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Theodore Anzevino: Portfolio</title>
-  <link href="basic_styles.css" rel="stylesheet" type="text/css" media="all">
-  <script src="code/templates.js" type="text/javascript" defer></script>
+  <title>Theodore Anzevino: Projects</title>
+  <link href="/styles.css" rel="stylesheet" type="text/css" media="all">
+  <script src="/code/templates.js" type="text/javascript" defer></script>
   </head>
   <body>
     <div id="container">
@@ -14,31 +14,47 @@
 
 			<div id="flex">
 				<main>
-					<h1>Projects</h1>
-					<a href="top_g.html">Top G</a>
+					<h1>Complete Projects</h1>
+					<!-- Top G -->
+					<div class="box" id="flex">
+						<main style="text-align: center;">
+							<h1>Top G</h1>
+							<p>Engine: Godot</p>
+							<p>Weekend</p>
+							<p>Gameplay Programming, Level Design, Modeling</p>
+						</main>
+						<aside id="leftSidebar" style="padding:0px; width:fit-content">
+							<a href="top_g/home.html">
+								<div class="hoverbox">
+									<img src="top_g/gameplay.gif" alt="Top G GIF" class="hoverimage">
+									<div class="hovercontent">
+										<div class="text">More Info</div>
+									</div>
+								</div>
+							</a>
+						</aside>
+          </div>
+					<!-- Flotsam -->
+					 <div class="box" id="flex">
+						<main style="text-align: center;">
+							<h1>Flotsam</h1>
+							<p>Engine: Godot</p>
+							<p>4 Months</p>
+							<p>Gameplay Programming, Level Design, Modeling</p>
+						</main>
+						<aside id="leftSidebar" style="padding:0px; width:fit-content">
+							<a href="flotsam/home.html">
+								<div class="hoverbox">
+									<img src="flotsam/gameplay.gif" alt="Flotsam GIF" class="hoverimage">
+									<div class="hovercontent">
+										<div class="text">More Info</div>
+									</div>
+								</div>
+							</a>
+						</aside>
+          </div>
 				</main>
-				
-				<aside id="leftSidebar" style="margin-right: 0px;">
-					<h2>Updates</h2>
-					<div class="box">
-						<p><strong>Please read this first!</strong></p>
-						<ul style="padding-left:10px;">
-							<li>Rewrote the JS to generate cleaner code</li>
-							<li>Rewrote the CSS in a way that hopefully makes much more sense to edit</li>
-							<li>Added a couple of new features!</li>
-							<li>Old version is still available <a href="old.html" target="_blank">here</a></li>
-						</ul>
-					</div>
-					<h2>Hi there!</h2>
-					<h3>Other Tools</h3>
-					<ul>
-						<li><a href="https://sadgrlonline.github.io/html-cheatsheet/" target="_blank">HTML Cheatsheet</a></li>
-						<li><a href="/sadgrl/webmastery/webmaster-links.html" target="_blank">Webmaster Links</a></li>
-						<li><a href="/sadgrl/webmastery/downloads/tiledbgs.html" target="_blank">Tiled BGs</a></li>
-						<li><a href="/sadgrl/webmastery/downloads/fonts.html" target="_blank">Fonts</a></li>
-						<li><a href="/sadgrl/projects/ideas/" target="_blank">Site Ideas</a></li>
-					</ul>
-				</aside>
+				<aside id="leftSidebar"><template-aside></template-aside></aside>
 			</div>
     	<template-footer></template-footer>
 		</div>
